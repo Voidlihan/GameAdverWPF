@@ -12,6 +12,7 @@ namespace GameAdvers
             Database.EnsureCreated();
         }
 
+        public DbSet<Game> Games { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=A-104-09;Database=Adver;Trusted_Connection=true;");

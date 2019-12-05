@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:GameAdvers"
         mc:Ignorable="d"
         Title="WindowGame" Height="450" Width="800">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF0D0A13" Offset="1"/>
-            <GradientStop Color="#FF5900F5" Offset="0.011"/>
-        </LinearGradientBrush>
-    </Window.Background>
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" Background="DarkGreen">
+            <Image x:Name="imgGame" Source="{Binding Img}" Width="200" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock" Text="{Binding Description}" Height="200" Width="598" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlockDeveloper" Text="Разработчик: " TextTrimming="{Binding Developer}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Margin="-1000 0 100 200" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="textBlockName" Text="Название: " TextTrimming="{Binding Name}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Margin="-1000 0 100 170" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="textBlockRelease" Text="Дата релиза: " TextTrimming="{Binding Release}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Margin="-1000 0 100 140" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="textBlockGenre" Text="Жанр: " TextTrimming="{Binding Genre}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Margin="-1000 0 100 110" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="textBlockPrice" Text="Стоимость: " TextTrimming="{Binding Price}" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Margin="-1000 0 100 80" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="textBlockRating" Text="Рейтинг: " TextTrimming="{Binding Rating}" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="-800 10 0 0" FontWeight="Bold" Foreground="White"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -13,5 +13,6 @@ namespace GameAdvers
         public string Genre { get; set; }
         public double Rating { get; set; }
         public double Price { get; set; }
+        public DateTime Release { get; set; }
     }
 }
